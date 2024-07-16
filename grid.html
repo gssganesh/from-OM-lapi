@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid layout</title>
+    <style>
+        *{
+            margin: 0;padding: 0;
+        }
+        .container{
+            display: grid;
+            margin: 20px;
+            padding: 20px;
+            height: 450px;
+            width: 800px;
+            background-color: bisque;
+            border: black solid;
+            grid-template-columns: 200px 150px 150px;
+            grid-template-rows: 100px 150px 50px;
+            grid-gap: 20px;
+        }
+        .item{
+            background-color: coral;
+            color: beige;
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+            align-content: center;
+        }
+        .item:nth-child(1){
+            background-color: brown;
+            grid-column: 1/4;
+        }
+        .item:nth-child(2){
+            background-color: burlywood;
+            grid-column: 1/2;
+        }
+        .item:nth-child(3){
+            background-color: cadetblue;
+            grid-column: 2/4;
+        }
+        .container{
+            grid-template-columns: repeat(3,1fr);
+        }
+        .item:nth-child(4){
+            background-color: darkkhaki;
+            grid-column: 1/4;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">navbar</div>
+        <div class="item">sideba</div>
+        <div class="item">content</div>
+        <div class="item">footer</div>
+    </div>
+</body>
+</html>
